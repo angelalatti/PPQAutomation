@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="DGPP Home Page Browser Project">
+<test name="TestHomePage with Chrome">
+    <parameter name="browser_to_run" value="Chrome"> </parameter>
+    <classes>
+        <class name="PoopyPants.DGPPHomePageTestCase" />
+    </classes>
+</test>
+<test name="TestHomePage with Edge">
+        <parameter name="browser_to_run" value="Edge"> </parameter>
+        <classes>
+            <class name="PoopyPants.DGPPHomePageTestCase" />
+        </classes>
+</test>
+ <test name="TestHomePage with Firefox">
+        <parameter name="browser_to_run" value="Firefox"> </parameter>
+        <classes>
+            <class name="PoopyPants.DGPPHomePageTestCase" />
+        </classes>
+    </test>
+</suite>
