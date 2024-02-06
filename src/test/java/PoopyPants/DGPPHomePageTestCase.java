@@ -29,8 +29,6 @@ public class DGPPHomePageTestCase {
 
         //Maximize browser
         driver.manage().window().maximize();
-
-
     }
 
     @AfterMethod
@@ -42,10 +40,9 @@ public class DGPPHomePageTestCase {
         driver.close();
     }
 
-
+    // got rid of excess spaces and changed the method name to camel case per java naming conventions
     @Test
-
-    public void clickquotebuttontest() throws InterruptedException{
+    public void clickQuoteButtonTest() throws InterruptedException{
 
         //click on button 3 times
         for (int i = 0; i < 3; i++) {
@@ -54,14 +51,6 @@ public class DGPPHomePageTestCase {
 
             //click on button
             driver.findElement(By.id("btn")).click();
-
-
         }
-
-
-
     }
-
-
     }
-
