@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.util.Objects;
@@ -40,7 +41,6 @@ public class DGPPHomePageTestCase {
         driver.close();
     }
 
-    // got rid of excess spaces and changed the method name to camel case per java naming conventions
     @Test
     public void clickQuoteButtonTest() throws InterruptedException{
 
@@ -53,4 +53,14 @@ public class DGPPHomePageTestCase {
             driver.findElement(By.id("btn")).click();
         }
     }
+
+    @Test
+    public void findGoogleAnalytics() {
+
+        Assert.assertTrue(driver.getPageSource().contains("https://www.googletagmanager.com/gtag/js?id=G-JS3051FE9X"), "Google Analytics Script Not Found");
+
+        Assert.assertTrue(driver.getPageSource().contains("gtag('config', 'G-JS3051FE9X')"), "Google Analytics Code Not Found");
+    }
+
+
     }
